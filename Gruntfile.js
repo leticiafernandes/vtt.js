@@ -1,9 +1,13 @@
 var exec = require("child_process").exec,
-    distFiles = [
+    distFilesDev = [
       "lib/browser-index.js",
       "lib/vttcue.js",
       "lib/vttregion.js",
       "lib/vtt.js"
+    ],
+    distFiles = [
+      "lib/*.js",
+      "lib/*/*.js"
     ],
     banner = "/* <%= pkg.name %> - v<%= pkg.version %> (<%= pkg.homepage %>) " +
              "built on <%= grunt.template.today('dd-mm-yyyy') %> */\n"
@@ -35,12 +39,7 @@ module.exports = function( grunt ) {
       },
       dist: {
         files: {
-          "dist/vtt.min.js": "dist/vtt.js"
-        }
-      },
-      global: {
-        files: {
-          "dist/vtt.global.min.js": "dist/vtt.global.js"
+          "dist/vtt.min.js": distFiles
         }
       },
       dev: {
