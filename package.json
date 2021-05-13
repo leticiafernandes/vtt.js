@@ -74,7 +74,7 @@
     "build-umd": "browserify -s vttjs . -o dist/vtt.js",
     "build-global": "browserify -s vttjs -p deumdify  . -o dist/vtt.global.js",
     "postbuild": "npm run minify",
-    "minify": "grunt uglify:dist uglify:global",
+    "minify": "grunt uglify:dist",
     "test": "grunt",
     "prepublishOnly": "npm run build"
   },
