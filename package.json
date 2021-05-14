@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/videojs/vtt.js",
   "devDependencies": {
+    "@babel/core": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^19.0.0",
     "async": "0.9.0",
     "browserify": "^14.3.0",
     "deumdify": "^1.2.4",
@@ -35,9 +39,9 @@
     "mocha": "^8.4.0",
     "node-vtt": "^1.1.6",
     "optimist": "^0.5.2",
-    "text-encoding": "0.1.0",
-    "underscore": "^1.13.1",
-    "watchify": "^4.0.0"
+    "rollup": "^2.47.0",
+    "rollup-plugin-uglify": "^6.0.4",
+    "underscore": "^1.13.1"
   },
   "files": [
     "dist/",
